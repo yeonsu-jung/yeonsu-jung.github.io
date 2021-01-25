@@ -17,18 +17,16 @@ We performed visualization and quantification of mixing process during orbital s
     Particle Image Velocimetry for a shaken liquid drop.
 </div>
 
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/8uduXRBkLeA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
 <div class="row text-center">
     <div class="col-sm mt-3 mt-md-0">
-        <iframe 
-            src="https://youtu.be/8uduXRBkLeA">
-        </iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8uduXRBkLeA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="col-sm mt-3 mt-md-0">
-         <iframe
-            src="https://youtu.be/HB6AO3hYLR0">
-        </iframe>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/HB6AO3hYLR0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 <div class="caption">
-Left: Particle images in a liquid drop. Right: Volume of Fluid analysis
+Up: Particle images in a liquid drop. Down: Volume of Fluid analysis
 </div>

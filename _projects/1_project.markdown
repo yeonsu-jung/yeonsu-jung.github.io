@@ -10,18 +10,14 @@ Mud nests built by swallows (Hirundinidae) and phoebes (*Sayornis*) are stable g
 
 <div class="row text-center">
     <div class="col-sm mt-3 mt-md-0">
-        <iframe
-            src="https://youtu.be/tYFGHM8LhM4">
-        </iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/L7rY_LTlZd0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="col-sm mt-3 mt-md-0">
-         <iframe
-            src="https://youtu.be/88HKutHYgJE">
-        </iframe>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/88HKutHYgJE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 <div class="caption">
-Left: Granular agglomeration by solvent evaporation of polymer solution. Right: Nest-inspired 3D printing.
+Left: Nest can withstand approximately 4 kg, which is 100 times heavier than the swallow weight. Right: Nest-inspired 3D printing.
 </div>
 
 <!-- <div class="row justify-content-sm-center">

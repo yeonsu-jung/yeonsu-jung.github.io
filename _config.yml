@@ -66,16 +66,16 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Yeonsu Jung  # your blog must have a name for it to show up in the nav bar
-blog_description: Yeonsu Jung's research website
-permalink: 
+blog_name:  # your blog must have a name for it to show up in the nav bar
+blog_description:
+permalink:
 
 # Pagination
 pagination:
   enabled: true
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 
 # -----------------------------------------------------------------------------
 # Collections

@@ -14,11 +14,13 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am generally interested in optimal principles in biological and bio-inspired systems: how biological systems are optimized and how we can utilize the optimal principles for engineering applications. As a fluid dynamicist, my early researches explored the optimal design principles of biological transport systems, such as the plant roots and the human lungs. I have gradually expanded my scopes of interest towards biological and bio-inspired structures and robots, like bird mud nest and artificial “ionic” spiderweb.
+<a href="/assets/pdf/cv_yjung.pdf">Download my pdf CV.</a>
 
-Currently, I am studying fluid dynamics of textured structures inspired by shark skin to find drag-reduction mechanisms and optimal principles associated with the morphology.
+I am generally interested in optimal principles in biological and bio-inspired systems: how biological systems are optimized and how we can utilize the optimal principles for engineering applications. As a fluid dynamicist, my early researches explored the optimal design principles of biological transport systems, such as the plant roots and the human lungs. I have gradually expanded my scopes of interest towards soft matter and soft robots, like bird mud nest and artificial ionic spiderweb.
 
-Recently, I am paying attention to the enormous potential of machine learning for the optimization and control of soft robots. I especially expect machine learning to find us the optimal control avenues for bio-inspired robots as competent as insect flying and fish swimming.
+Currently, I am studying fluid dynamics of textured structures inspired by shark skin to understanding drag-reduction mechanisms and optimal principles associated with the texture morphology.
+
+Recently, I am paying attention to the enormous potential of machine learning for the optimization and control of soft robots. I especially expect machine learning to find us the optimal control avenues for bio-inspired robots as competent as flying insects and swimming fishes.
 
 <!-- Write your biography here. Tell the world about yourself. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
 <!-- 

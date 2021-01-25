@@ -18,5 +18,5 @@ We mundanely observe cellulose (kitchen) sponges swell while absorbing water. Fl
 </div>
 <br><br><br><br>
 <div class="caption">
-    Liquid rising with swelling in a cellulose sponge.
+    Liquid rising with swelling in a cellulose sponge.<br> Courtesy of Dr. Ha, hajh88@gmail.com.
 </div>
