@@ -1,77 +1,22 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: /assets/img/1.jpg
-importance: 3
+title: when sponges get wet
+description: poro-elasto-capillarity of sponges
+img: /assets/img/sponge/sponge.png
+importance: 1
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+We mundanely observe cellulose (kitchen) sponges swell while absorbing water. Fluid flows in deformable porous media, such as soils and hydrogels, are classically described on the basis of the theories of Darcy and poroelasticity, where the expansion of media arises due to increased pore pressure. However, the situation is qualitatively different in cellulosic porous materials like sponges because the pore expansion is driven by wetting of the surrounding cellulose walls rather than by increase of the internal pore pressure. We address a seemingly so simple but hitherto unanswered question of how fast water wicks into the swelling sponge. Our experiments uncover a power law of the wicking height versus time distinct from that for nonswelling materials. The observation using environmental scanning electron microscopy reveals the coalescence of microscale wall pores with wetting, which allows us to build a mathematical model for pore size evolution and the consequent wicking dynamics. Our study sheds light on the physics of water absorption in hygroscopically responsive multiscale porous materials, which have far more implications than everyday activities (for example, cleaning, writing, and painting) carried out with cellulosic materials (paper and sponge), including absorbent hygiene products, biomedical cell cultures, building safety, and cooking.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/1.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/3.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
-
+<br><br><br><br><br><br>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/sponge/sponge_rising.gif' | relative_url }}" alt="" title="example image" style="transform:rotate(90deg);"/>
+    </div>        
 </div>
+<br><br><br><br>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Liquid rising with swelling in a cellulose sponge.
 </div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-```
