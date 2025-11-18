@@ -1,21 +1,25 @@
----
 layout: default
 ---
 
-I am currently a postdoctoral researcher in [Applied Mathematics at Harvard](https://seas.harvard.edu/applied-mathematics), working with [Prof. L. Mahadevan](https://softmath.seas.harvard.edu/). Previously, I completed my Ph.D. in Mechanical Engineering at Seoul National University under the supervision of [Prof. Ho-Young Kim](https://fluids.snu.ac.kr/).
+I am a postdoctoral researcher in [Applied Mathematics at Harvard](https://seas.harvard.edu/applied-mathematics), working with [Prof. L. Mahadevan](https://softmath.seas.harvard.edu/). Previously, I completed my Ph.D. in Mechanical Engineering at Seoul National University under the supervision of [Prof. Ho-Young Kim](https://fluids.snu.ac.kr/).
 
-My research broadly explores the nonlinear dynamics and physics of soft matter, with particular interests in:  
-- **Nonlinear dynamics** ([irregular rolling](https://www.pnas.org/doi/10.1073/pnas.2417161122))  
-- **Singularities** (e.g., paper folding and crumpling)  
-- **Geometry and topology** ([entanglement](https://www.pnas.org/doi/10.1073/pnas.2401868122), [tentacle robots](https://www.pnas.org/doi/10.1073/pnas.2209819119), [irregular rolling](https://www.pnas.org/doi/10.1073/pnas.2417161122))  
-- **Controllability of soft structures** ([web robots](https://www.science.org/doi/10.1126/scirobotics.aaz5405), [tentacle robots](https://www.pnas.org/doi/10.1073/pnas.2209819119))  
-- **Friction and contact in soft systems** ([entanglement](https://www.pnas.org/doi/10.1073/pnas.2401868122), *dynamic* [Signorini problems](https://en.wikipedia.org/wiki/Signorini_problem))  
-- **Collective behavior** ([entanglement](https://www.pnas.org/doi/10.1073/pnas.2401868122), [tentacle robots](https://www.pnas.org/doi/10.1073/pnas.2209819119))  
-— and just about everything else that bends, twists, or entangles, collectively.
+My research program, **Controlling disordered soft-matter systems with nonsmooth interactions**, aims to turn mechanical complexity into a predictive and designable resource through a strongly computational lens. I develop **physics-based, computational tools** for soft and active matter that combine reduced-order modeling, optimization, and data-driven inference with tightly coupled experiments. A central theme is using computation to close the loop between **experiment, model, and inverse design**, so that simulations are not just descriptive but actively guide what we build and measure.
 
+On the computational side, I focus on:
+- **Discrete differential geometry (DDG) and reduced-order models** for filament elasticity, contact, friction, and topological constraints  
+- **Nonsmooth mechanics and complementarity-based contact solvers** for disordered, contact-rich media  
+- **Inverse design and control as inference**, formulating high-level objectives (entanglement, force transmission, dissipation, robustness) and solving constrained optimization problems in physical parameter spaces  
+- **Data-driven reconstruction and coarse-graining**, extracting geometry, contact networks, and force chains from 3D imaging data to identify minimal, predictive state variables  
+- **Computational soft materials and high-performance simulation tools**, with an emphasis on reproducible, open workflows that can be shared across physics and engineering communities  
+
+These computational methods are tightly integrated with custom experiments and fabrication to study and solve **inverse problems in soft matter**:
+- **Entangled filament ensembles and contact-rich soft robotic grasping**  
+- **Disordered soft and active materials**, where geometry, friction, and topology organize macroscopic behavior  
+- Extensions to **viscoelastic liquids, multiphase flows, and biological networks**, where predictive, simulation-ready coarse-grained descriptions are still missing  
+
+More broadly, my work sits at the interface of **physics, engineering, and computation**, bridging nonlinear dynamics, nonequilibrium mechanics, and the physics of information and learning in complex materials.
 
 <!-- [Research statement](./research-statement.html) -->
-
 
 
 ## Publications
