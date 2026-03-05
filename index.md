@@ -4,28 +4,55 @@ layout: default
 
 I am a postdoctoral researcher in [Applied Mathematics at Harvard](https://seas.harvard.edu/applied-mathematics), working with [Prof. L. Mahadevan](https://softmath.seas.harvard.edu/). Previously, I completed my Ph.D. in Mechanical Engineering at Seoul National University under the supervision of [Prof. Ho-Young Kim](https://fluids.snu.ac.kr/).
 
-My research program, **Controlling disordered soft-matter systems with nonsmooth interactions**, aims to turn mechanical complexity into a predictive and designable resource through a strongly computational lens. I develop **physics-based, computational tools** for soft and active matter that combine reduced-order modeling and optimization with tightly coupled experiments. A central theme is using computation to close the loop between **experiment, model, and inverse design**, so that simulations are not just descriptive but actively guide what we build and measure and, in the longer term, interface naturally with emerging data-driven approaches.
+My research program, **Controlling disordered soft-matter systems with nonsmooth interactions**, aims to turn mechanical complexity due to disorder and nonsmoothness into a predictive and designable resource through a strongly computational lens. I develop **physics-based, computational tools** for soft and active matter that combine reduced-order modeling and optimization with tightly coupled experiments. A central theme is using computation to close the loop between **experiment, model, and inverse design**, so that simulations are not just descriptive but actively guide what we build and measure and, in the longer term, interface naturally with emerging data-driven approaches.
 
 On the computational side, I focus on:
+
 - **Discrete differential geometry (DDG) and reduced-order models** for filament elasticity, contact, friction, and topological constraints  
-- **Nonsmooth mechanics and complementarity-based contact solvers** for disordered, contact-rich media  
+- **Nonsmooth mechanics and complementarity-based contact solvers** for disordered, contact-rich media
 - **Inverse design and control as inference**, formulating high-level objectives (entanglement, force transmission, dissipation, robustness) and solving constrained optimization problems in physical parameter spaces  
 - **Reconstruction and coarse-graining of complex configurations**, using 3D imaging and geometric analysis to identify minimal, predictive state variables and laying the groundwork for future data-driven modeling  
-- **Computational soft materials and high-performance simulation tools**, with an emphasis on reproducible, open workflows that can be shared across physics and engineering communities  
+- **Computational soft materials and high-performance simulation tools**, with an emphasis on reproducible, open workflows that can be shared across physics and engineering communities
 
 These computational methods are tightly integrated with custom experiments and fabrication to study and solve **inverse problems in soft matter**:
+
 - **Entangled filament ensembles and contact-rich soft robotic grasping**  
 - **Disordered soft and active materials**, where geometry, friction, and topology organize macroscopic behavior  
-- Extensions to **viscoelastic liquids, multiphase flows, and biological networks**, where predictive, simulation-ready coarse-grained descriptions are still missing  
+- Extensions to **viscoelastic liquids, multiphase flows, and biological networks**, where predictive, simulation-ready coarse-grained descriptions are still missing.
 
-More broadly, my work sits at the interface of **physics, engineering, and computation**, bridging nonlinear dynamics, nonequilibrium mechanics, and the physics of information and learning in complex materials.
+More broadly, my work sits at the interface of **physics, engineering, and computation**, bridging nonlinear dynamics, nonequilibrium mechanics, materials science, architecture, and soft robotics.
 
 <!-- [Research statement](./research-statement.html) -->
 
+## Works
+
+### Entanglement and packing
+
+- [Rod Dynamics Simulation in 3D](./works/rod-dynamics-3d.html) — C++ simulation of rod ensembles with contact and friction
+- [Entanglement Optimization](./works/entanglement-optimization.html) — Maximize linking number in rod configurations (C++ and JAX)
+- [Random Sequential Adsorption of 3D Rods](./works/rod-placement.html) — RSA packings and the entanglement transition
+
+### Control and inverse design
+
+- [Snake Control](./works/snake-control.html) — Topology-guided trajectory optimization for hyper-redundant robots
+- [Snake Lattice](./works/snake-lattice.html) — Inverse design of elastic curve networks
+
+### Simulation infrastructure
+
+- [DER Python](./works/der-python.html) — Discrete Elastic Rods in Python/JAX with inextensibility plugin
+- [3D Segmentation of Rods from X-Ray Scans](./works/matlab-image-processing.html) — MATLAB pipeline for CT-based rod reconstruction
+
+### Active matter
+
+- [Active Billiards](./works/active-billiards-multi.html) — Work extraction from active AR(1) particles via a ratcheted wheel
 
 ## Publications
 
 *: Co-first authors
+
+**Morphogenesis and morphometry of brain folding patterns across species**
+Sifan Yin, Chunzi Liu, Gary PT Choi, Yeonsu Jung, Katja Heuer, Roberto Toro, L. Mahadevan
+[eLife 14, RP107138 (2025)](https://doi.org/10.7554/eLife.107138.2)
 
 **Phase transitions in rolling of irregular cylinders and spheres**  
 Daoyuan Qian, **YJ**, L. Mahadevan  

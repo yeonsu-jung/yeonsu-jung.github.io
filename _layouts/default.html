@@ -34,6 +34,14 @@
         jung [at] seas.harvard.edu
         <p class="view"><a href="https://scholar.google.com/citations?user=BMZc1CcAAAAJ&hl=en">Google Scholar Profile</a></p>
 
+        <nav>
+          <ul style="list-style:none; padding:0; margin-top:1em; line-height:2;">
+            <li><a href="{{ '/' | absolute_url }}">Home</a></li>
+            <li><a href="{{ '/works' | absolute_url }}">Works</a></li>
+            <li><a href="{{ '/notes' | absolute_url }}">Notes</a></li>
+          </ul>
+        </nav>
+
         {% if site.show_downloads %}
         <ul class="downloads">
           <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
