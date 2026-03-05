@@ -4,9 +4,9 @@ layout: default
 
 I am a postdoctoral researcher in [Applied Mathematics at Harvard](https://seas.harvard.edu/applied-mathematics), working with [Prof. L. Mahadevan](https://softmath.seas.harvard.edu/). Previously, I completed my Ph.D. in Mechanical Engineering at Seoul National University under the supervision of [Prof. Ho-Young Kim](https://fluids.snu.ac.kr/).
 
-My research program, **Controlling disordered soft-matter systems with nonsmooth interactions**, aims to turn mechanical complexity due to disorder and nonsmoothness into a predictive and designable resource through a strongly computational lens. I develop **physics-based, computational tools** for soft and active matter that combine reduced-order modeling and optimization with tightly coupled experiments. A central theme is using computation to close the loop between **experiment, model, and inverse design**, so that simulations are not just descriptive but actively guide what we build and measure and, in the longer term, interface naturally with emerging data-driven approaches.
+I develop **physics-based computational tools** for soft and active matter that combine reduced-order modeling and optimization with tightly coupled experiments. A central theme of my research is using computation to close the loop between **experiment, model, and inverse design**, so that simulations are not just descriptive but actively guide what we build and measure, while interfacing naturally with emerging data-driven approaches in the longer term. Earlier in my PhD, my work focused on optimal principles discovered in natural transport systems (e.g., the lungs and plant roots) and stable structures (e.g., bird nests made of mud). Below are some of my recent works.
 
-On the computational side, I focus on:
+<!-- On the computational side, I focus on:
 
 - **Discrete differential geometry (DDG) and reduced-order models** for filament elasticity, contact, friction, and topological constraints  
 - **Nonsmooth mechanics and complementarity-based contact solvers** for disordered, contact-rich media
@@ -20,13 +20,11 @@ These computational methods are tightly integrated with custom experiments and f
 - **Disordered soft and active materials**, where geometry, friction, and topology organize macroscopic behavior  
 - Extensions to **viscoelastic liquids, multiphase flows, and biological networks**, where predictive, simulation-ready coarse-grained descriptions are still missing.
 
-More broadly, my work sits at the interface of **physics, engineering, and computation**, bridging nonlinear dynamics, nonequilibrium mechanics, materials science, architecture, and soft robotics.
+More broadly, my work sits at the interface of **physics, engineering, and computation**, bridging nonlinear dynamics, nonequilibrium mechanics, materials science, architecture, and soft robotics. -->
 
 <!-- [Research statement](./research-statement.html) -->
 
-## Works
-
-### Entanglement and packing
+### Entanglement transition
 
 - [Rod Dynamics Simulation in 3D](./works/rod-dynamics-3d.html) — C++ simulation of rod ensembles with contact and friction
 - [Entanglement Optimization](./works/entanglement-optimization.html) — Maximize linking number in rod configurations (C++ and JAX)
@@ -50,8 +48,20 @@ More broadly, my work sits at the interface of **physics, engineering, and compu
 
 *: Co-first authors
 
-**Morphogenesis and morphometry of brain folding patterns across species**
-Sifan Yin, Chunzi Liu, Gary PT Choi, Yeonsu Jung, Katja Heuer, Roberto Toro, L. Mahadevan
+**Emergent cohesion via self-caging in maximally entangled rod packings**  
+**YJ** and L. Mahadevan  
+(In preparation)
+
+**Boundary-driven active matter and stochastic rectification via Leidenfrost impulses**  
+Minseong Cho, **YJ** and Jonghyun Ha  
+(In preparation)
+
+**Rotational 3D printing of active-passive filaments and lattices with programmable shape morphing**  
+Mustafa K. Abdelrahman, Jackson K. Wilt, **YJ**, Rodrigo Telles, Gurminder K. Paink, Natalie M. Larson, Joanna Aizenberg, L. Mahadevan, and Jennifer A. Lewis  
+(Under review)
+
+**Morphogenesis and morphometry of brain folding patterns across species**  
+Sifan Yin, Chunzi Liu, Gary PT Choi, **YJ**, Katja Heuer, Roberto Toro, L. Mahadevan
 [eLife 14, RP107138 (2025)](https://doi.org/10.7554/eLife.107138.2)
 
 **Phase transitions in rolling of irregular cylinders and spheres**  
@@ -76,7 +86,7 @@ Jungtaek Kim, **YJ**, Ho-Young Kim
 [Physical Review Fluids 7, L032001 (2022)](https://doi.org/10.1103/PhysRevFluids.7.L032001)
 
 **Soft artificial electroreceptors for non-contact spatial perception**  
-W. J. Song*, Y. Lee*, **YJ***, Y.-W. Kang, J. Kim, J.-M. Park, Y.-L. Park, H.-Y. Kim, J.-Y. Sun  
+W. J. Song*, Y. Lee*, **YJ** *, Y.-W. Kang, J. Kim, J.-M. Park, Y.-L. Park, H.-Y. Kim, J.-Y. Sun  
 [Science Advances 7, sciadv.abg9203 (2021)](https://www.science.org/doi/10.1126/sciadv.abg9203)
 
 **Avian mud nest architecture by self-secreted saliva**  
@@ -88,7 +98,7 @@ Y. Lee*, W. J. Song*, **YJ**, H. You, M.-Y. Kim, H.-Y. Kim, J.-Y. Sun
 [Science Robotics 5, eaaz5405 (2020)](https://www.science.org/doi/10.1126/scirobotics.aaz5405)
 
 **Optimal diameter reduction ratio of acinar airways in human lungs**  
-K. Park*, **YJ**, T. Son, Y.-J. Cho, N. L. Jeon, W. Kim, H.-Y. Kim  
+K. Park*, **YJ** *, T. Son, Y.-J. Cho, N. L. Jeon, W. Kim, H.-Y. Kim  
 [PLOS ONE 14, e0218947 (2019)](https://doi.org/10.1371/journal.pone.0204191)
 
 **Poro-elasto-capillary wicking of cellulose sponges**  
@@ -96,7 +106,7 @@ J. Ha, J. Kim, **YJ**, G. Yun, D.-N. Kim, H.-Y. Kim
 [Science Advances 4, eaao7051 (2018)](https://www.science.org/doi/10.1126/sciadv.aao7051)
 
 **Capillarity ion concentration polarization as spontaneous desalting mechanism**  
-S. Park*, **YJ***, S. Y. Son, I. Cho, Y. Cho, H. Lee, H.-Y. Kim, S. J. Kim  
+S. Park*, **YJ** *, S. Y. Son, I. Cho, Y. Cho, H. Lee, H.-Y. Kim, S. J. Kim  
 [Nature Communications 7, 11223 (2016)](https://doi.org/10.1038/ncomms11223)
 
 **Three-dimensional point spread function of surface plasmon-coupled emission microscopy**  
