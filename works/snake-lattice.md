@@ -33,7 +33,7 @@ Configurations are stored as `.npy` files containing node positions and edge con
 The analysis scripts cover:
 
 - `analysis.py` — In-plane deformation and force response
-- `analysis2.py` — Extended analysis with multiple loading scenarios
+<!-- - `analysis2.py` — Extended analysis with multiple loading scenarios -->
 - `analysis_out_of_plane.py` — Out-of-plane buckling and topology changes
 
 ## Inverse design perspective
