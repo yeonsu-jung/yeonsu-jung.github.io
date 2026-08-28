@@ -44,6 +44,13 @@ More broadly, my work sits at the interface of **physics, engineering, and compu
 
 - [Active Billiards](./works/active-billiards-multi.html) — Work extraction from active AR(1) particles via a ratcheted wheel
 
+### Experimental work
+
+- [X-Ray Tomography of Entangled Rod Packings](./works/xray-tomography-rods.html) — Micro-CT imaging and reconstruction of real fiber assemblies
+- [Ionic Hydrogel Devices](./works/ionic-soft-devices.html) — Stretchable spiderwebs and non-contact electroreceptors (*Science Robotics*, *Science Advances*)
+- [Shark-Skin-Inspired Drag Reduction](./works/riblet-drag-reduction.html) — Fabrication and flow testing of textured surfaces
+- [Mechanics of Avian Mud Nests](./works/mud-nest-mechanics.html) — Granular composites bonded by saliva, tested to failure (*PNAS*)
+
 ## Publications
 
 *: Co-first authors
