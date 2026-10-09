@@ -120,6 +120,7 @@ button { font: inherit; color: inherit; }
 .hero .role a:hover { color: var(--accent); }
 .hero .lede { font-size: var(--fs-lede); line-height: 1.55; max-width: 34em; margin-bottom: 14px; }
 .hero .how { color: var(--ink-2); max-width: 36em; margin-bottom: 24px; }
+.hero .how b { color: var(--ink); font-weight: 600; }
 .links { display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .links a, .links button {
   display: inline-flex;
@@ -179,8 +180,10 @@ section.block { padding-block: 52px; border-top: 1px solid var(--rule); }
   margin: 8px 0 22px;
 }
 
-.interests { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 30px; }
+.interests { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px 26px; }
 .interests li { border-top: 2px solid var(--ink); padding-top: 12px; }
+.interests li.lead { border-top-color: var(--accent); }
+.interests li.lead h3 { color: var(--accent); }
 .interests h3 { font-family: var(--f-display); font-weight: 600; font-size: 1.22rem; line-height: 1.18; margin-bottom: 6px; }
 .interests p { font-size: var(--fs-small); color: var(--ink-2); }
 .interests .see { margin-top: 8px; font-family: var(--f-mono); font-size: var(--fs-micro); }
@@ -217,6 +220,7 @@ footer.contact { border-top: 2px solid var(--ink); padding-block: 38px 56px; }
 @media (max-width: 1040px) {
   .hero-grid, .two { grid-template-columns: minmax(0, 1fr); gap: 34px; }
   .interests { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .interests li.lead { grid-column: 1 / -1; }
 }
 @media (max-width: 720px) {
   :root { --gutter: 16px; }

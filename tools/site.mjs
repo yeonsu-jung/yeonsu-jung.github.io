@@ -11,6 +11,8 @@
 //         Open every page in headless Chrome and report console errors, pictures that did not
 //         load, links within the site that lead nowhere, and a CV that is not two pages or is
 //         older than cv.html.
+//     node tools/site.mjs check --url https://yeonsu-jung.github.io
+//         The same against the published site, portfolio included.
 //
 // Needs Node 22 or later, and google-chrome for cv and check. Nothing to install.
 
@@ -160,11 +162,19 @@ async function cv() {
 
 async function check(args) {
   const portfolio = resolve(option(args, '--portfolio', join(homedir(), 'Documents', 'portfolio')));
+  const published = option(args, '--url', '').replace(/\/$/, '');
   const bad = [];
   const fail = msg => { bad.push(msg); console.log('  FAIL  ' + msg); };
   const ok = msg => console.log('  ok    ' + msg);
-  const server = await serve(portfolio), b = await chrome();
-  const base = `http://127.0.0.1:${server.address().port}`;
+  const server = published ? null : await serve(portfolio), b = await chrome();
+  const base = published || `http://127.0.0.1:${server.address().port}`;
+  // the text of what a path within the site leads to, or null: from the folders, or from the published site
+  const texts = new Map();
+  const reach = async path => {
+    if (!published) { const f = fileFor(path, portfolio); return f ? readFileSync(f, 'latin1') : null; }
+    if (!texts.has(path)) { const r = await fetch(base + path); texts.set(path, r.ok ? Buffer.from(await r.arrayBuffer()).toString('latin1') : null); }
+    return texts.get(path);
+  };
   try {
     for (const name of PAGES) {
       console.log(name);
@@ -186,9 +196,9 @@ async function check(args) {
         if (href.startsWith('#')) { if (!await p.eval(`!!document.getElementById(${JSON.stringify(href.slice(1))})`)) fail(`${name}: nothing on the page is called ${href}`); continue; }
         if (!href.startsWith('/')) { fail(`${name}: ${href} is neither a full address nor a path from the site's root`); continue; }
         const [path, hash] = href.split('#');
-        const f = fileFor(path, portfolio);
-        if (!f) fail(`${name}: ${href} leads nowhere`);
-        else if (hash && !new RegExp(`id="${hash}"`).test(readFileSync(f, 'utf8'))) fail(`${name}: ${path} has nothing called #${hash}`);
+        const text = await reach(path);
+        if (text === null) fail(`${name}: ${href} leads nowhere`);
+        else if (hash && !new RegExp(`id="${hash}"`).test(text)) fail(`${name}: ${path} has nothing called #${hash}`);
         else inside++;
       }
       for (const line of p.logs) fail(`${name}: ${line}`);
@@ -200,13 +210,20 @@ async function check(args) {
       (await fetch(base + path)).status === 404 ? ok(`${path} is not served`) : fail(`${path} is served`);
     console.log(CV);
     const pdfFile = join(ROOT, CV);
-    if (!existsSync(pdfFile)) fail(`${CV} is missing: node tools/site.mjs cv`);
+    if (published) {
+      const there = await reach('/' + CV);
+      if (there === null) fail(`${CV} is not on the published site`);
+      else {
+        pagesOf(Buffer.from(there, 'latin1')) === 2 ? ok('2 pages') : fail('not 2 pages');
+        existsSync(pdfFile) && readFileSync(pdfFile).equals(Buffer.from(there, 'latin1')) ? ok('the same file as in this folder') : fail('differs from the file in this folder (not pushed yet?)');
+      }
+    } else if (!existsSync(pdfFile)) fail(`${CV} is missing: node tools/site.mjs cv`);
     else {
       const n = pagesOf(readFileSync(pdfFile));
       n === 2 ? ok('2 pages') : fail(`${n} pages, not 2`);
       statSync(pdfFile).mtimeMs >= statSync(join(ROOT, 'cv.html')).mtimeMs ? ok('not older than cv.html') : fail('older than cv.html: node tools/site.mjs cv');
     }
-  } finally { await b.close(); server.close(); }
+  } finally { await b.close(); if (server) server.close(); }
   console.log(bad.length ? `\n${bad.length} problem(s)` : '\nall good');
   return bad.length ? 1 : 0;
 }
