@@ -1,5 +1,5 @@
-title: Yeonsu Jung
-logo: /assets/img/logo.jpg
-show_downloads: false
-google_analytics:
-theme: jekyll-theme-minimal
+# This site is plain HTML: Jekyll only copies it. What is listed here, and anything whose
+# name starts with an underscore (the notes in _notes/), is kept out of the published site.
+exclude:
+  - README.md
+  - tools

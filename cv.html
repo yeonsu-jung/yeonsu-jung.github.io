@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV · Yeonsu Jung</title>
+<meta name="description" content="Curriculum vitae of Yeonsu Jung: physics-based simulation, numerical optimization, contact-rich robotics.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Cpath d='M5 22c5-14 9 6 13-6s6-4 9-8' fill='none' stroke='%2358a6ff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+/* The CV. This page is also the source of Yeonsu_Jung_CV.pdf, which tools/site.mjs prints from it:
+   two US Letter pages. Change the text here, then run  node tools/site.mjs cv. */
+.cv-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding-block: 22px 16px; max-width: 8.5in; margin-inline: auto; }
+.cv-bar p { font-family: var(--f-mono); font-size: var(--fs-micro); color: var(--ink-3); }
+.sheet-page {
+  max-width: 8.5in;
+  margin: 0 auto 56px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.55in 0.6in;
+  font-size: 10pt;
+  line-height: 1.37;
+  color: var(--ink);
+}
+.sheet-page a { color: inherit; text-decoration: none; border-bottom: 0.5pt solid var(--rule-strong); }
+.cv-name { font-family: var(--f-display); font-weight: 600; font-size: 23pt; line-height: 1; letter-spacing: -0.01em; }
+.cv-tag { font-family: var(--f-display); font-weight: 600; font-size: 11.5pt; color: var(--accent); margin-top: 4pt; }
+.cv-contact { font-family: var(--f-mono); font-size: 7.9pt; color: var(--ink-2); margin-top: 5pt; }
+.cv-contact span { white-space: nowrap; }
+.cv-contact span + span::before { content: "·"; margin: 0 5pt; color: var(--ink-3); }
+.sheet-page h2 {
+  font-family: var(--f-mono);
+  font-size: 7.9pt;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 0.75pt solid var(--ink);
+  padding-bottom: 2pt;
+  margin: 10pt 0 4.5pt;
+  break-after: avoid;
+}
+.sheet-page h2.page-two { break-before: page; }
+.sheet-page p { margin: 0; }
+.sheet-page ul.b { list-style: disc; padding-left: 12pt; margin: 2pt 0 0; }
+.sheet-page ul.b li { margin: 0 0 1.6pt; padding-left: 1pt; }
+.sheet-page ul.b li::marker { color: var(--ink-3); }
+.skills { display: grid; grid-template-columns: 8.4em minmax(0, 1fr); gap: 2.5pt 10pt; }
+.skills dt { font-weight: 600; }
+.skills dd { margin: 0; color: var(--ink-2); }
+.item { margin-top: 6pt; break-inside: avoid; }
+.item:first-of-type { margin-top: 0; }
+.item .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+.item .line b { font-weight: 600; }
+.item .line span { font-family: var(--f-mono); font-size: 7.9pt; color: var(--ink-3); white-space: nowrap; }
+.item .where { color: var(--ink-2); font-style: italic; }
+.refs { padding: 0; margin: 0; }
+.refs li { margin: 0 0 2.4pt; padding-left: 12pt; text-indent: -12pt; break-inside: avoid; }
+.refs i { font-style: italic; }
+.cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 22pt; }
+.plain li { display: grid; grid-template-columns: 4.3em minmax(0, 1fr); margin: 0 0 1.6pt; }
+.plain li > span { font-family: var(--f-mono); font-size: 7.9pt; color: var(--ink-3); padding-top: 1.4pt; }
+
+@media (max-width: 720px) {
+  .sheet-page { padding: 22px 18px; border-radius: 0; border-inline: 0; }
+  .cols { grid-template-columns: minmax(0, 1fr); }
+  .item .line { flex-wrap: wrap; gap: 0 12pt; }
+}
+@page { size: letter; margin: 0.5in 0.6in; }
+@media print {
+  :root {
+    color-scheme: light;
+    --bg: #ffffff; --surface: #ffffff; --ink: #111820; --ink-2: #3a4450; --ink-3: #5d6772;
+    --rule: #cfd5dc; --rule-strong: #aab3bd; --accent: #0b4f8a;
+  }
+  body { background: #fff; }
+  .topbar, .cv-bar, .skip { display: none !important; }
+  .sheet-page { max-width: none; margin: 0; border: 0; border-radius: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#cv">Skip to the CV</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="who" href="/">Yeonsu Jung</a>
+    <nav aria-label="Site">
+      <ul class="tabs">
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/publications.html">Publications</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="cv-bar">
+    <p>Curriculum vitae · October 2026</p>
+    <ul class="links"><li><a class="primary" href="/Yeonsu_Jung_CV.pdf">Download as PDF</a></li></ul>
+  </div>
+</div>
+
+<main class="sheet-page" id="cv">
+
+  <header>
+    <p class="cv-name">Yeonsu Jung</p>
+    <p class="cv-tag">Physics-based simulation · Numerical optimization · Contact-rich robotics</p>
+    <p class="cv-contact"><span>Cambridge, MA</span><span><a href="mailto:jung@seas.harvard.edu">jung@seas.harvard.edu</a></span><span><a href="https://yeonsu-jung.github.io/">yeonsu-jung.github.io</a></span><span><a href="https://yeonsu-jung.github.io/portfolio/">interactive portfolio</a></span><span><a href="https://github.com/yeonsu-jung">github.com/yeonsu-jung</a></span><span><a href="https://scholar.google.com/citations?user=BMZc1CcAAAAJ">Google Scholar</a></span></p>
+  </header>
+
+  <h2>Summary</h2>
+  <p>Mechanical engineer (Ph.D.) and Research Associate in Applied Mathematics at Harvard. I build physics-based simulations of contact-rich and deformable systems and the numerical optimization that runs on them: differentiable simulation, trajectory optimization, inverse design and reinforcement learning. I check the simulators against theory and against experiments. Co-author of 14 peer-reviewed journal papers, five of them in <i>PNAS</i>, and others in <i>Science Robotics</i> and <i>Science Advances</i>.</p>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Simulation</dt>
+    <dd>MuJoCo (C++ plugin API, MJX, MuJoCo Warp, mjlab), Newton; my own rigid-body contact engine in C++17 with OpenMP and CUDA; discrete elastic rods; cone-complementarity contact (projected Gauss–Seidel) and penalty contact with Cundall–Strack and Hertz–Mindlin friction</dd>
+    <dt>Optimization</dt>
+    <dd>Differentiable simulation in JAX (<span style="font-family: var(--f-mono); font-size: 0.92em;">jit</span>, <span style="font-family: var(--f-mono); font-size: 0.92em;">vmap</span>, <span style="font-family: var(--f-mono); font-size: 0.92em;">scan</span>); trajectory optimization; sparse Newton and Gauss–Newton solvers; FIRE energy minimization on GPU; augmented Lagrangian methods; CasADi/IPOPT</dd>
+    <dt>Control, learning</dt>
+    <dd>PPO (RSL-RL, CleanRL); LQR about periodic orbits; sampling-based receding-horizon control</dd>
+    <dt>Software</dt>
+    <dd>Python, C++17, CUDA, JavaScript, MATLAB, Julia; pybind11, CMake, pytest, GitHub Actions, SLURM</dd>
+    <dt>Experiment</dt>
+    <dd>X-ray micro-CT and 3D segmentation; high-speed imaging; particle image velocimetry; apparatus design and machining</dd>
+  </dl>
+
+  <h2>Selected projects</h2>
+  <div class="item">
+    <p class="line"><b>Elastic rods in joint coordinates, for robot simulators</b><span>2025–2026 · manuscript in preparation, sole author</span></p>
+    <ul class="b">
+      <li>Derived one swing–twist rod energy with an exact, closed-form ball-joint torque, and implemented it four ways (NumPy, JAX, PyTorch inside mjlab, a C++ plugin for MuJoCo) that agree to 2×10<sup>−11</sup>. The chain converges to Euler–Bernoulli beam theory at fourth order.</li>
+      <li>Found that MuJoCo's stock cable torque is not the gradient of an energy (off by 7.7–46.7% once the bend axis tilts) and that its RK4 is second order, not fourth, for non-planar rotations.</li>
+      <li>Control on the verified model: a whip crack optimized by reverse-mode differentiation through MJX (tip at 68 m/s, 5.8 mm from its target); a periodic LQR that holds an unstable cracking orbit; PPO in 4,096 parallel environments (MuJoCo Warp) that rears a 16-link chain; a receding-horizon controller that rights a tumbling glider in 10 of 10 launches.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <p class="line"><b>Entangled rod packings: optimization, contact engines, X-ray CT</b><span>2021–2026 · PNAS 2025 · PRL under revision</span></p>
+    <ul class="b">
+      <li>Wrote a JAX optimizer (FIRE, on GPU) that maximizes the entanglement of up to 2,000 rods without overlap, and a C++17 engine for rigid rods in contact (cone complementarity by projected Gauss–Seidel, soft contact, OpenMP, a CUDA broad phase).</li>
+      <li>Showed that maximally entangled packings cage themselves and hold together by friction alone. Re-ran the dynamics in MuJoCo to test which results survive a change of contact model: the cooling law does (time constant within 15%), contact lifetimes do not.</li>
+      <li>Measured real packings by X-ray micro-CT, with a pipeline that traces about 4,600 rods in a 2000 × 2000 × 741 voxel scan in 12 minutes.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <p class="line"><b>Shape-morphing lattices: prediction and inverse design</b><span>2024–2026 · PNAS 2026</span></p>
+    <ul class="b">
+      <li>Discrete elastic rod simulations that predict how rotationally 3D-printed lattices morph when heated (with the Lewis group at Harvard).</li>
+      <li>Inverse design in JAX: a damped sparse Newton solver with stability checks follows the equilibrium out of the flat state, and Gauss–Newton fits the design to a target surface.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <p class="line"><b>Calibrating a simulator against hardware</b><span>2026 · with experimental collaborators</span></p>
+    <ul class="b">
+      <li>A simulator for chains of centimeter-scale vibration-driven robots, with hard and soft constraints. Rotational noise is fitted from tracking of single robots; the calibrated model matches 23 of 30 cells of the measured stability map. I rejected a variant that fitted better but stretched the joints beyond their measured play.</li>
+    </ul>
+  </div>
+
+  <h2 class="page-two">Experience</h2>
+  <div class="item">
+    <p class="line"><b>Research Associate in Applied Mathematics</b> <span>2021–present</span></p>
+    <p class="where">Harvard John A. Paulson School of Engineering and Applied Sciences, Cambridge, MA · with L. Mahadevan · Postdoctoral Fellow at first</p>
+    <ul class="b">
+      <li>Simulation, optimization and experiments on contact-rich filamentary systems: collision handling, nonlinear rod mechanics, reduced-order models, inverse design.</li>
+      <li>Worked with the Harvard Microrobotics Laboratory on grasping by entanglement (<i>PNAS</i> 2022) and with the Lewis group on printed shape-morphing lattices (<i>PNAS</i> 2026).</li>
+    </ul>
+  </div>
+  <div class="item">
+    <p class="line"><b>Postdoctoral Fellow</b> <span>2020–2021</span></p>
+    <p class="where">Rowland Institute at Harvard, Cambridge, MA</p>
+    <ul class="b">
+      <li>Modeling, fabrication and flow measurement (particle image velocimetry) of shark-skin-inspired drag-reducing surfaces.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <p class="line"><b>Postdoctoral Fellow</b> <span>2019–2020</span></p>
+    <p class="where">Seoul National University, Seoul, South Korea</p>
+    <ul class="b">
+      <li>Models and experiments for ionic-hydrogel actuators and soft electroreceptors (<i>Science Robotics</i> 2020, <i>Science Advances</i> 2021), and the mechanics of mud nests (<i>PNAS</i> 2021).</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <ul class="plain">
+    <li><span>2019</span><div><b>Ph.D., Mechanical Engineering</b>, Seoul National University (advisor H.-Y. Kim). Optimal design in natural transport systems: plant roots, lung airways.</div></li>
+    <li><span>2014</span><div><b>M.S., Biomedical Engineering</b>, Gwangju Institute of Science and Technology (GIST)</div></li>
+    <li><span>2012</span><div><b>B.S., Mechanical Engineering</b>, Pohang University of Science and Technology (POSTECH)</div></li>
+  </ul>
+
+  <h2>Selected publications</h2>
+  <ul class="refs">
+    <li><b>Y. Jung</b>, L. Mahadevan. Emergent cohesion via self-caging in maximally entangled rod packings. <i>Physical Review Letters</i>, under revision. <a href="https://arxiv.org/abs/2606.03952">arXiv:2606.03952</a> (2026).</li>
+    <li>M. K. Abdelrahman, J. K. Wilt, <b>Y. Jung</b>, et al. Rotational 3D printing of active–passive filaments and lattices with programmable shape morphing. <i>PNAS</i> 123, e2537250123 (2026).</li>
+    <li><b>Y. Jung</b>, T. Plumb-Reyes, H.-Y. G. Lin, L. Mahadevan. Entanglement transition in random rod packings. <i>PNAS</i> 122, e2401868122 (2025).</li>
+    <li>K. Becker, C. Teeple, N. Charles, <b>Y. Jung</b>, et al. Active entanglement enables stochastic, topological grasping. <i>PNAS</i> 119, e2209819119 (2022).</li>
+    <li>W. J. Song*, Y. Lee*, <b>Y. Jung</b>*, et al. Soft artificial electroreceptors for noncontact spatial perception. <i>Science Advances</i> 7, eabg9203 (2021). *Equal contribution.</li>
+    <li><b>Y. Jung</b>, S. Jung, S.-i. Lee, W. Kim, H.-Y. Kim. Avian mud nest architecture by self-secreted saliva. <i>PNAS</i> 118, e2018509118 (2021).</li>
+    <li>Full list of 14 journal papers: <a href="https://yeonsu-jung.github.io/publications.html">yeonsu-jung.github.io/publications.html</a></li>
+  </ul>
+
+  <div class="cols">
+    <div>
+      <h2>Selected talks</h2>
+      <ul class="plain">
+        <li><span>2026</span><div>Condensed Matter Theory Kids' Seminar, Harvard</div></li>
+        <li><span>2025</span><div>Physics of Living Systems, MIT</div></li>
+        <li><span>2024</span><div>Network Science Institute, Northeastern University</div></li>
+        <li><span>2023</span><div>Physics colloquia, Michigan Technological University and Bard College; APS March Meeting</div></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Awards and teaching</h2>
+      <ul class="plain">
+        <li><span>2021–22</span><div>Postdoctoral Fellowship Abroad, National Research Foundation of Korea</div></li>
+        <li><span>2014–16</span><div>Superior Academic Performance Scholarship, Seoul National University</div></li>
+        <li><span>2008–10</span><div>National Scholarship, National Research Foundation of Korea</div></li>
+        <li><span>2024</span><div>Teaching Fellow, Gen Ed 1190, Harvard University</div></li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
