@@ -8,6 +8,7 @@ hand; there is nothing to build.
 | Home | `index.html` |
 | Publications | `publications.html` |
 | CV | `cv.html`, and `Yeonsu_Jung_CV.pdf` printed from it |
+| X-ray viewer | `xray/`, exported by `export_public.py` next to the full viewer in the X-ray data folder; nothing here to edit by hand |
 | Portfolio | not in this repository: [`yeonsu-jung/portfolio`](https://github.com/yeonsu-jung/portfolio), which GitHub Pages serves at `/portfolio/` |
 
 `assets/site.css` is the one stylesheet. The three tabs at the top (Home, Portfolio,
