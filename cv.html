@@ -32,6 +32,8 @@
 .cv-contact { font-family: var(--f-mono); font-size: 7.9pt; color: var(--ink-2); margin-top: 5pt; }
 .cv-contact span { white-space: nowrap; }
 .cv-contact span + span::before { content: "·"; margin: 0 5pt; color: var(--ink-3); }
+/* On paper the contact line just fits; on a screen narrower than the page it wraps between items. */
+@media screen { .cv-contact { display: flex; flex-wrap: wrap; row-gap: 2pt; } }
 .sheet-page h2 {
   font-family: var(--f-mono);
   font-size: 7.9pt;
