@@ -8,11 +8,11 @@ hand; there is nothing to build.
 | Home | `index.html` |
 | Publications | `publications.html` |
 | CV | `cv.html`, and `Yeonsu_Jung_CV.pdf` printed from it |
-| X-ray viewer | `xray/`, exported by `export_public.py` next to the full viewer in the X-ray data folder; nothing here to edit by hand |
-| Portfolio | not in this repository: [`yeonsu-jung/portfolio`](https://github.com/yeonsu-jung/portfolio), which GitHub Pages serves at `/portfolio/` |
+| Portfolio (robotics), Portfolio (3D imaging) | not in this repository: [`yeonsu-jung/portfolio`](https://github.com/yeonsu-jung/portfolio), which GitHub Pages serves at `/portfolio/` and `/portfolio/imaging.html` |
+| `xray/` | only a redirect to the scan viewer, which moved to the 3D imaging portfolio |
 
-`assets/site.css` is the one stylesheet. The three tabs at the top (Home, Portfolio,
-Publications) are repeated in each page, and in the portfolio's page.
+`assets/site.css` is the one stylesheet. The four tabs at the top (Home, Portfolio (robotics),
+Portfolio (3D imaging), Publications) are repeated in each page, and in the portfolio's two pages.
 
 ## Working on it
 

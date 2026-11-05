@@ -228,6 +228,10 @@ footer.contact { border-top: 2px solid var(--ink); padding-block: 38px 56px; }
   section.block { padding-block: 40px; }
   .topbar .wrap { gap: 6px 14px; }
   .tabs a { padding: 5px 8px; }
+  /* four tabs do not fit beside the name on a phone: they get a line of their own */
+  :root { --bar: 104px; }
+  .topbar .wrap { flex-wrap: wrap; min-height: 0; padding-block: 7px 2px; }
+  .tabs { flex-wrap: wrap; row-gap: 2px; flex-basis: 100%; margin-left: -8px; }
   .interests { grid-template-columns: minmax(0, 1fr); }
   .pubs li { grid-template-columns: minmax(0, 1fr); }
   .facts { grid-template-columns: minmax(0, 1fr); }
