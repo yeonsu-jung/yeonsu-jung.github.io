@@ -76,7 +76,7 @@ button { font: inherit; color: inherit; }
 .skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--bg); padding: 8px 12px; z-index: 30; }
 .skip:focus { left: 8px; top: 8px; }
 
-/* ---------- top bar: the three tabs of the site ---------- */
+/* ---------- top bar: the five tabs of the site ---------- */
 .topbar {
   position: sticky;
   top: 0;
@@ -222,16 +222,24 @@ footer.contact { border-top: 2px solid var(--ink); padding-block: 38px 56px; }
   .interests { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .interests li.lead { grid-column: 1 / -1; }
 }
+/* below this width the five tabs do not fit beside the name: they get a line of their own */
+@media (max-width: 1000px) {
+  :root { --bar: 104px; }
+  .topbar .wrap { flex-wrap: wrap; min-height: 0; padding-block: 7px 2px; }
+  .topbar nav { flex-basis: 100%; }
+  .tabs { flex-wrap: wrap; row-gap: 2px; margin-left: -11px; }
+}
 @media (max-width: 720px) {
   :root { --gutter: 16px; }
   .hero { padding-block: 34px 36px; }
   section.block { padding-block: 40px; }
   .topbar .wrap { gap: 6px 14px; }
   .tabs a { padding: 5px 8px; }
-  /* four tabs do not fit beside the name on a phone: they get a line of their own */
+  /* five tabs do not fit beside the name on a phone: they get a line of their own */
   :root { --bar: 104px; }
   .topbar .wrap { flex-wrap: wrap; min-height: 0; padding-block: 7px 2px; }
   .tabs { flex-wrap: wrap; row-gap: 2px; flex-basis: 100%; margin-left: -8px; }
+  .tabs .pf { display: none; }   /* on a phone the portfolio tabs drop "Portfolio ( )", so the five fit on two lines */
   .interests { grid-template-columns: minmax(0, 1fr); }
   .pubs li { grid-template-columns: minmax(0, 1fr); }
   .facts { grid-template-columns: minmax(0, 1fr); }

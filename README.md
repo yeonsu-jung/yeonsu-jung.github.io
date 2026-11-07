@@ -8,11 +8,12 @@ hand; there is nothing to build.
 | Home | `index.html` |
 | Publications | `publications.html` |
 | CV | `cv.html`, and `Yeonsu_Jung_CV.pdf` printed from it |
-| Portfolio (robotics), Portfolio (3D imaging) | not in this repository: [`yeonsu-jung/portfolio`](https://github.com/yeonsu-jung/portfolio), which GitHub Pages serves at `/portfolio/` and `/portfolio/imaging.html` |
+| Portfolio (robotics), Portfolio (3D imaging), Portfolio (experiments) | not in this repository: [`yeonsu-jung/portfolio`](https://github.com/yeonsu-jung/portfolio), which GitHub Pages serves at `/portfolio/`, `/portfolio/imaging.html` and `/portfolio/experiments.html` |
 | `xray/` | only a redirect to the scan viewer, which moved to the 3D imaging portfolio |
 
-`assets/site.css` is the one stylesheet. The four tabs at the top (Home, Portfolio (robotics),
-Portfolio (3D imaging), Publications) are repeated in each page, and in the portfolio's two pages.
+`assets/site.css` is the one stylesheet. The five tabs at the top (Home, Portfolio (robotics),
+Portfolio (3D imaging), Portfolio (experiments), Publications) are repeated in each page, and in the portfolio's three pages.
+On a phone the portfolio tabs drop "Portfolio ( )" (the `.pf` spans), so the five fit on two lines.
 
 ## Working on it
 
