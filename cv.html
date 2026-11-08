@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CV · Yeonsu Jung</title>
-<meta name="description" content="Curriculum vitae of Yeonsu Jung: physics-based simulation, numerical optimization, contact-rich robotics.">
+<meta name="description" content="Curriculum vitae of Yeonsu Jung: physics-based simulation, X-ray CT and 3D imaging, experimental mechanics, contact-rich robotics.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Cpath d='M5 22c5-14 9 6 13-6s6-4 9-8' fill='none' stroke='%2358a6ff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,6 +82,10 @@
   body { background: #fff; }
   .topbar, .cv-bar, .skip { display: none !important; }
   .sheet-page { max-width: none; margin: 0; border: 0; border-radius: 0; padding: 0; }
+  /* The PDF is set at 87%. Until November 2026 Chrome reached that scale by itself, shrinking the
+     page to fit a contact line that ran wider than it; the scale is now stated, so the line's
+     length no longer changes the page count. */
+  .sheet-page { zoom: 0.87; }
 }
 </style>
 </head>
@@ -105,7 +109,7 @@
 
 <div class="wrap">
   <div class="cv-bar">
-    <p>Curriculum vitae · October 2026</p>
+    <p>Curriculum vitae · November 2026</p>
     <ul class="links"><li><a class="primary" href="/Yeonsu_Jung_CV.pdf">Download as PDF</a></li></ul>
   </div>
 </div>
@@ -114,66 +118,73 @@
 
   <header>
     <p class="cv-name">Yeonsu Jung</p>
-    <p class="cv-tag">Physics-based simulation · Numerical optimization · Contact-rich robotics</p>
-    <p class="cv-contact"><span>Cambridge, MA</span><span><a href="mailto:jung@seas.harvard.edu">jung@seas.harvard.edu</a></span><span><a href="https://yeonsu-jung.github.io/">yeonsu-jung.github.io</a></span><span><a href="https://yeonsu-jung.github.io/portfolio/">interactive portfolio</a></span><span><a href="https://github.com/yeonsu-jung">github.com/yeonsu-jung</a></span><span><a href="https://scholar.google.com/citations?user=BMZc1CcAAAAJ">Google Scholar</a></span></p>
+    <p class="cv-tag">Physics-based simulation · X-ray CT and 3D imaging · Experimental mechanics · Contact-rich robotics</p>
+    <p class="cv-contact"><span>Cambridge, MA</span><span><a href="mailto:jung@seas.harvard.edu">jung@seas.harvard.edu</a></span><span><a href="https://yeonsu-jung.github.io/">yeonsu-jung.github.io</a></span><span><a href="https://yeonsu-jung.github.io/portfolio/">portfolio</a></span><span><a href="https://github.com/yeonsu-jung">github.com/yeonsu-jung</a></span><span><a href="https://scholar.google.com/citations?user=BMZc1CcAAAAJ">Google Scholar</a></span></p>
   </header>
 
   <h2>Summary</h2>
-  <p>Mechanical engineer (Ph.D.) and Research Associate in Applied Mathematics at Harvard. I build physics-based simulations of contact-rich and deformable systems and the numerical optimization that runs on them: differentiable simulation, trajectory optimization, inverse design and reinforcement learning. What I most want to work on is real-to-sim-to-real transfer: a simulator built from measurements of the real system, calibrated against hardware, and results that hold when they go back to it. Co-author of 14 peer-reviewed journal papers, five of them in <i>PNAS</i>, and others in <i>Science Robotics</i> and <i>Science Advances</i>.</p>
+  <p>Mechanical engineer (Ph.D.) and Research Associate at Harvard School of Engineering and Applied Sciences. I work on contact-rich and deformable systems in three ways: physics-based simulation and the numerical optimization that runs on it; X-ray micro-CT and 3D image analysis, where I build the fixtures, run the scanners and write the analysis; and experiments. What I most want to work on is real-to-sim-to-real transfer: a simulator built from measurements of the real system, calibrated against hardware, and results that hold when they go back to it. I run multiple projects of more than 100 commits each with AI coding and science agents (Claude Code, Codex), every step gated by reproduction and conformance checks. Co-author of 14 peer-reviewed journal papers, five of them in <i>PNAS</i>, and others in <i>Science Robotics</i> and <i>Science Advances</i>.</p>
 
   <h2>Skills</h2>
   <dl class="skills">
     <dt>Simulation</dt>
-    <dd>MuJoCo (C++ plugin API, MJX, MuJoCo Warp, mjlab), Newton; my own rigid-body contact engine in C++17 with OpenMP and CUDA; discrete elastic rods; cone-complementarity contact (projected Gauss–Seidel) and penalty contact with Cundall–Strack and Hertz–Mindlin friction</dd>
+    <dd>MuJoCo (C++ plugin API, MJX, MuJoCo Warp, mjlab), Newton, NVIDIA Warp; my own rigid-body contact engine in C++17 with OpenMP and CUDA; discrete elastic rods; complementarity and penalty contact with friction</dd>
     <dt>Optimization</dt>
-    <dd>Differentiable simulation in JAX (<span style="font-family: var(--f-mono); font-size: 0.92em;">jit</span>, <span style="font-family: var(--f-mono); font-size: 0.92em;">vmap</span>, <span style="font-family: var(--f-mono); font-size: 0.92em;">scan</span>); trajectory optimization; sparse Newton and Gauss–Newton solvers; FIRE energy minimization on GPU; augmented Lagrangian methods; CasADi/IPOPT</dd>
-    <dt>Control, learning</dt>
-    <dd>PPO (RSL-RL); LQR about periodic orbits; sampling-based receding-horizon control</dd>
+    <dd>Differentiable simulation in JAX (<span style="font-family: var(--f-mono); font-size: 0.92em;">jit</span>, <span style="font-family: var(--f-mono); font-size: 0.92em;">vmap</span>, <span style="font-family: var(--f-mono); font-size: 0.92em;">scan</span>); trajectory optimization; sparse Newton and Gauss–Newton; FIRE on GPU; augmented Lagrangian; CasADi/IPOPT; control and learning: PPO (RSL-RL), LQR, receding-horizon control</dd>
+    <dt>X-ray CT, imaging</dt>
+    <dd>Micro-CT on a Nikon X-Tek HMXST 225 and a Zeiss Xradia Versa 620; fixtures and in-situ load frames; 3D segmentation and object tracing; reconstruction (ASTRA); Dragonfly (Python), VGStudio, ParaView, Blender; OpenCV tracking; high-speed imaging; PIV</dd>
+    <dt>Fabrication, testing</dt>
+    <dd>Fixture and apparatus design; certified user of the Harvard SEAS machine shop (lathe, mill, bandsaw, grinder); CAD in SolidWorks, Fusion and Onshape; 3D printing (Prusa, Formlabs); molds and polymer casting; bending, centrifugal and load-frame tests</dd>
     <dt>Software</dt>
-    <dd>Python, C++17, CUDA, JavaScript, MATLAB; pybind11, CMake, pytest, GitHub Actions, SLURM</dd>
-    <dt>Experiment</dt>
-    <dd>X-ray micro-CT and 3D segmentation; high-speed imaging; particle image velocimetry; apparatus design and machining</dd>
+    <dd>Python, C++17, CUDA, JavaScript, MATLAB; PyTorch; pybind11, CMake, pytest, GitHub Actions, SLURM; Claude Code, Codex</dd>
   </dl>
 
   <h2>Selected projects</h2>
-  <div class="item">
-    <p class="line"><b>Elastic rods in joint coordinates, for robot simulators</b><span>2025–2026</span></p>
-    <ul class="b">
-      <li>Derived one swing–twist rod energy with an exact, closed-form ball-joint torque, and implemented it four ways (NumPy, JAX, PyTorch inside mjlab, a C++ plugin for MuJoCo) that agree to 2×10<sup>−11</sup>. The chain converges to Euler–Bernoulli beam theory at fourth order.</li>
-      <li>Found that MuJoCo's stock cable torque is not the gradient of an energy (off by 7.7–46.7% once the bend axis tilts) and that its RK4 is second order, not fourth, for non-planar rotations.</li>
-      <li>Control on the verified model: a whip crack optimized by reverse-mode differentiation through MJX (tip at 68 m/s, 5.8 mm from its target); a periodic LQR that holds an unstable cracking orbit; PPO in 4,096 parallel environments (MuJoCo Warp) that rears a 16-link chain; a receding-horizon controller that rights a tumbling glider in 10 of 10 launches.</li>
-    </ul>
-  </div>
   <div class="item">
     <p class="line"><b>Entangled rod packings: optimization, contact engines, X-ray CT</b><span>2021–2026 · PNAS 2025 · PRL under revision</span></p>
     <ul class="b">
       <li>Wrote a JAX optimizer (FIRE, on GPU) that maximizes the entanglement of up to 2,000 rods without overlap, and a C++17 engine for rigid rods in contact (cone complementarity by projected Gauss–Seidel, soft contact, OpenMP, a CUDA broad phase).</li>
       <li>Showed that maximally entangled packings cage themselves and hold together by friction alone. Re-ran the dynamics in MuJoCo to test which results survive a change of contact model: the cooling law does (time constant within 15%), contact lifetimes do not.</li>
-      <li>Measured real packings by X-ray micro-CT, with a pipeline that traces about 4,600 rods in a 2000 × 2000 × 741 voxel scan in 12 minutes.</li>
+      <li>Measured real steel-rod packings by X-ray micro-CT: built the fixtures, ran the scans, and wrote a pipeline that traces about 4,600 rods in a 2000 × 2000 × 741 voxel scan in 12 minutes.</li>
     </ul>
   </div>
   <div class="item">
-    <p class="line"><b>Shape-morphing lattices: prediction and inverse design</b><span>2024–2026 · PNAS 2026</span></p>
+    <p class="line"><b>X-ray micro-CT and 3D image analysis</b><span>2021–2026 · eLife 2025</span></p>
     <ul class="b">
-      <li>Discrete elastic rod simulations that predict how rotationally 3D-printed lattices morph when heated (with the Lewis group at Harvard).</li>
-      <li>Inverse design in JAX: a damped sparse Newton solver with stability checks follows the equilibrium out of the flat state, and Gauss–Newton fits the design to a target surface.</li>
+      <li>Scan metal, polymer, gel, granular and biological samples on two systems, and write the software that turns the scans into measurements. A browser viewer ray-marches five of the tomograms on the GPU.</li>
+      <li>Building in-situ load frames for both scanners (ongoing): force is logged while a packing is scanned at each load step, and each scan gives its contacts and the contact network's algebraic connectivity.</li>
+      <li>When scans on a shared scanner began to show out-of-focus halos, ruled out the sample with a series of test scans and showed that the X-ray beam and the detector were misaligned; the service company then fixed it on site.</li>
     </ul>
   </div>
   <div class="item">
-    <p class="line"><b>Calibrating a simulator against hardware</b><span>2026 · with experimental collaborators</span></p>
+    <p class="line"><b>Elastic rods in joint coordinates, for robot simulators</b><span>2025–2026</span></p>
     <ul class="b">
-      <li>A simulator for chains of centimeter-scale vibration-driven robots, with hard and soft constraints. Rotational noise is fitted from tracking of single robots; the calibrated model matches 23 of 30 cells of the measured stability map. I rejected a variant that fitted better but stretched the joints beyond their measured play.</li>
+      <li>Derived one swing–twist rod energy with an exact ball-joint torque, implemented four ways (NumPy, JAX, PyTorch in mjlab, a C++ MuJoCo plugin) that agree to 2×10<sup>−11</sup>. Found that MuJoCo's stock cable torque is not the gradient of an energy (off by 7.7–46.7% once the bend axis tilts).</li>
+      <li>Control on the verified model, in simulation: a whip crack optimized by differentiating through MJX (tip at 68 m/s, 5.8 mm from its target); a periodic LQR; PPO in 4,096 parallel environments (MuJoCo Warp) that rears a 16-link chain; receding-horizon control that rights a tumbling glider in 10 of 10 launches.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <p class="line"><b>Models of collaborators' experiments</b><span>2022–2026 · PNAS 2022 · PNAS 2026</span></p>
+    <ul class="b">
+      <li>Calibrated a simulator of centimeter-scale vibration-driven robot chains against hardware: it matches 23 of 30 cells of the measured stability map. I rejected a variant that fitted better but stretched the joints beyond their measured play.</li>
+      <li>Predicted how rotationally 3D-printed lattices morph when heated, with discrete elastic rods, and fitted designs to target surfaces in JAX (Lewis group); analysis, micro-CT and later a simulation of a gripper that holds by entanglement (Wood group).</li>
     </ul>
   </div>
 
-  <h2 class="page-two">Experience</h2>
+  <h2 class="page-two">Experiments</h2>
+  <ul class="b">
+    <li><b>Swallow nests</b> (<i>PNAS</i> 2021, first author): measured the strength of real nests and of polymer-bridged granules in three-point bending and in a centrifuge, and printed nests from clay and mucin.</li>
+    <li><b>Hydrogel beads on a hot pan</b> (<i>Physical Review E</i>, under revision, corresponding author): devised the Leidenfrost experiment with M. Cho and J. Ha, in which a bead gets its energy only from vapor bursts at the wall, and model its motion.</li>
+    <li><b>Earlier:</b> artificial roots drawing water from packed beads (<i>J. R. Soc. Interface</i> 2019); irregular cylinders rolling down a ramp, tracked on video (<i>PNAS</i> 2025).</li>
+  </ul>
+
+  <h2>Experience</h2>
   <div class="item">
     <p class="line"><b>Research Associate in Applied Mathematics</b> <span>2026–present</span></p>
     <p class="line"><b>Postdoctoral Fellow</b> <span>2021–2026</span></p>
     <p class="where">Harvard John A. Paulson School of Engineering and Applied Sciences, Cambridge, MA · with L. Mahadevan</p>
     <ul class="b">
-      <li>Simulation, optimization and experiments on contact-rich filamentary systems: collision handling, nonlinear rod mechanics, reduced-order models, inverse design.</li>
-      <li>Worked with the Harvard Microrobotics Laboratory on grasping by entanglement (<i>PNAS</i> 2022) and with the Lewis group on printed shape-morphing lattices (<i>PNAS</i> 2026).</li>
+      <li>Simulation, X-ray CT and experiments on contact-rich filamentary systems: collision handling, nonlinear rod mechanics, 3D image analysis, inverse design. Work with experimental groups in robotics, materials and 3D printing; mentor junior researchers.</li>
     </ul>
   </div>
   <div class="item">
@@ -201,8 +212,10 @@
   <h2>Selected publications</h2>
   <ul class="refs">
     <li><b>Y. Jung</b>, L. Mahadevan. Emergent cohesion via self-caging in maximally entangled rod packings. <i>Physical Review Letters</i>, under revision. <a href="https://arxiv.org/abs/2606.03952">arXiv:2606.03952</a> (2026).</li>
+    <li>M. Cho, <b>Y. Jung</b>, J. Ha. Boundary-driven activity of a Leidenfrost hydrogel. <i>Physical Review E</i>, under revision (2026).</li>
     <li>M. K. Abdelrahman, J. K. Wilt, <b>Y. Jung</b>, et al. Rotational 3D printing of active–passive filaments and lattices with programmable shape morphing. <i>PNAS</i> 123, e2537250123 (2026).</li>
     <li><b>Y. Jung</b>, T. Plumb-Reyes, H.-Y. G. Lin, L. Mahadevan. Entanglement transition in random rod packings. <i>PNAS</i> 122, e2401868122 (2025).</li>
+    <li>S. Yin, C. Liu, G. P. T. Choi, <b>Y. Jung</b>, et al. Morphogenesis and morphometry of brain folding patterns across species. <i>eLife</i> 14, RP107138 (2025).</li>
     <li>K. Becker, C. Teeple, N. Charles, <b>Y. Jung</b>, et al. Active entanglement enables stochastic, topological grasping. <i>PNAS</i> 119, e2209819119 (2022).</li>
     <li>W. J. Song*, Y. Lee*, <b>Y. Jung</b>*, et al. Soft artificial electroreceptors for noncontact spatial perception. <i>Science Advances</i> 7, eabg9203 (2021). *Equal contribution.</li>
     <li><b>Y. Jung</b>, S. Jung, S.-i. Lee, W. Kim, H.-Y. Kim. Avian mud nest architecture by self-secreted saliva. <i>PNAS</i> 118, e2018509118 (2021).</li>
