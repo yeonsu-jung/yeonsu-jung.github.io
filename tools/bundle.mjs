@@ -393,13 +393,21 @@ async function main() {
 <style>
   :root { color-scheme: light dark; }
   html, body { margin: 0; height: 100%; overflow: hidden; background: #fff; color: #1f2328; }
+  body { display: flex; flex-direction: column; }
   @media (prefers-color-scheme: dark) { html, body { background: #0d1117; color: #e6edf3; } }
-  #view { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
-  #wait { position: fixed; inset: 0; display: grid; place-items: center; font: 15px/1.5 system-ui, sans-serif; opacity: .7; }
+  #view { flex: 1 1 auto; min-height: 0; width: 100%; border: 0; display: block; }
+  #wait { position: fixed; inset: 0; display: grid; place-items: center; font: 15px/1.5 system-ui, sans-serif; opacity: .7; }${LITE ? `
+  #note { flex: none; display: flex; align-items: center; gap: 12px; padding: 7px 16px; font: 13px/1.45 system-ui, -apple-system, sans-serif;
+          background: #f6f8fa; color: #57606a; border-bottom: 1px solid #d0d7de; }
+  #note span { flex: 1; }
+  #note a { color: inherit; white-space: nowrap; }
+  #note button { flex: none; border: 0; background: none; color: inherit; font: inherit; font-size: 18px; line-height: 1; padding: 2px 4px; cursor: pointer; }
+  @media (prefers-color-scheme: dark) { #note { background: #161b22; color: #8b949e; border-color: #30363d; } }` : ''}
 </style>
 </head>
 <body>
-<div id="wait">Opening Yeonsu Jung's website…</div>
+<div id="wait">Opening Yeonsu Jung's website…</div>${LITE ? `
+<div id="note" role="note"><span>A local copy of the published website, <a href="${LIVE}/" target="_blank" rel="noopener">yeonsu-jung.github.io</a>. The 3D viewers and the clips load from the published site, so they need an internet connection.</span><button type="button" aria-label="Hide this note" title="Hide this note" onclick="this.parentNode.remove()">×</button></div>` : ''}
 <iframe id="view" title="Yeonsu Jung" allow="fullscreen; clipboard-write; autoplay"></iframe>
 ${parts.join('\n')}
 <script>${RUNTIME.replace('__PAGES__', JSON.stringify(PAGES))}</script>
