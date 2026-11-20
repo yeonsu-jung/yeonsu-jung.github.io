@@ -159,7 +159,7 @@
   <div class="item">
     <p class="line"><b>Elastic rods in joint coordinates, for robot simulators</b><span>2025–2026</span></p>
     <ul class="b">
-      <li>Derived one swing–twist rod energy with an exact ball-joint torque, implemented four ways (NumPy, JAX, PyTorch in mjlab, a C++ MuJoCo plugin) that agree to 2×10<sup>−11</sup>. Found that MuJoCo's stock cable torque is not the gradient of an energy (off by 7.7–46.7% once the bend axis tilts).</li>
+      <li>Derived one swing–twist rod energy with an exact ball-joint torque, implemented four ways (NumPy, JAX, PyTorch in mjlab, a C++ MuJoCo plugin) that agree to 2×10<sup>−11</sup>. Found that the cable torque of MuJoCo 3.x is not the gradient of an energy (off by 7.7–46.7% once the bend axis tilts).</li>
       <li>Control on the verified model, in simulation: a whip crack optimized by differentiating through MJX (tip at 68 m/s, 5.8 mm from its target); a periodic LQR; PPO in 4,096 parallel environments (MuJoCo Warp) that rears a 16-link chain; receding-horizon control that rights a tumbling glider in 10 of 10 launches.</li>
     </ul>
   </div>
